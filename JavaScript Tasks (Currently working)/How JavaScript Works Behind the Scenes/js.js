@@ -7,3 +7,5 @@
 //Dynamic (dont asigne type of value)
 //Single-threaded
 //Non-blockign event loop
+
+//examples below
