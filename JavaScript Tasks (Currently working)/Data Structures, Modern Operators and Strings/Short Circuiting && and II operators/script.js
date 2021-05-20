@@ -42,6 +42,10 @@ const restaurant = {
   orderPasta: function (ing1, ing2, ing3) {
     console.log(`Here is your delicious pasta with ${ing1},${ing2},${ing3}`);
   },
+  orderPizza: function (mainIngredient, ...otherIngredients) {
+    console.log(mainIngredient);
+    console.log(otherIngredients);
+  },
 };
 
 //Use any data type, return any data type
@@ -50,7 +54,22 @@ console.log('' || 'Jonas');
 console.log(true || 0);
 console.log(undefined || null);
 
-console.log(undefined || 0 || '' || 'Hello' || 23 || null);
+console.log(undefined || 0 || null || 'Hello' || 23 || null);
 
+restaurant.numGuests = 23;
 const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
 console.log(guests1);
+
+const guests2 = restaurant.numGuests || 10;
+console.log(guests2);
+
+console.log('-----AND-----');
+console.log(0 && 'Jonas');
+console.log(7 && 'Jonas');
+console.log('Hello' && 23 && null && 'Jonas');
+
+if (restaurant.orderPizza) {
+  restaurant.orderPizza('mushrooms', 'spinach');
+}
+
+restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
