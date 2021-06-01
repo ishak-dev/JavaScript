@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+      
+        <link rel="stylesheet" href="css.css">
+    </head>
+    <body onload="typeWriter()" >
+        <div class="content">
+            <img src="img/376332.png" alt="" style="width: 55%;">
+        <div class="right-side">
+                <p id="text"></p>
+        </div>
+        <div class="login">
+            <div class="inputs">
+            <p id="SignIn"><b>Sign in     <span>or</span></b><button class="register">Register</button></p>
+            <input type="text" name="email" id="email" placeholder="Email" value="">
+            <input type="password" name="password" id="password" placeholder="Password" onkeypress="showPassword()" >
+            <button id="show" onclick="buttonShow();">show</button>
+            <button id="hide" onclick="buttonHide();">hide</button>
+            <br>
+            </div>
+            <button onclick="check()">Confirm</button>
+       </div>
+       
+       <div class="error" id="error"><div class="error-border"></div>
+           <div class="background-error"><h4>ACCESS DENIED </h4></div><button id="errorButton" onclick="closeError()">&#10060;</button><p >Please check your inputs!</p>
+           <span class="EscOrX">Press Esc or "X"</span>
+        
+        </div>
+        <div class="success" id="success"><div class="success-border"></div>
+           <div class="background-success"><h4>ACCESS SUCCESS </h4></div><button id="errorButton" onclick="closeError()">&#10060;</button><p >Success sign in!</p>
+           <span class="EscOrX">Press Esc or "X"</span>
+        
+        </div>
+        
+     </div>
+        
+        <script src="securitycheck.js" ></script>
+    </body>
+</html>
